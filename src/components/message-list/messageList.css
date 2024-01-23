@@ -1,0 +1,153 @@
+.message-list{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    
+}
+.messages{
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+    padding-top: 80px;
+}
+.messages span{
+    display: block;
+    text-align: center;
+}
+.message-list .profile{
+    padding: 5px 20px;
+    border-bottom: 1px solid black;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 99;
+}
+.message-list .profile p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sendmsg{
+    text-align: end;
+    
+}
+.sendmsg p{
+    padding: 10px 20px;
+    background-color: #5F35F5;
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
+}
+.sendmsg .imgdiv{
+    padding: 10px;
+    background-color: #5F35F5;
+    display: inline-block;
+    border-radius: 10px;
+}
+.sendmsg img{
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
+.sendmsg audio{
+    padding: 10px;
+    background-color: #5F35F5;
+    display: inline-block;
+    border-radius: 10px;
+}
+#react-modal-image-img{
+    width: auto;
+    height: auto;
+}
+.receivmsg p{
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    display: inline-block;
+    border-radius: 10px;
+}
+.receivmsg .imgdiv{
+    padding: 10px;
+    background-color: #f1f1f1;
+    display: inline-block;
+    border-radius: 10px;
+}
+.receivmsg img{
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
+/* write message css */
+.write-message{
+    border-top: 1px solid black;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.write-message .input{
+    width: 80%;
+    position: relative;
+}
+.write-message .input input{
+    padding: 10px;
+    width: 100%;
+    background-color: #f1f1f1;
+    font-size: 20px;
+}
+.write-message .input .audio{
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.write-message .button{
+    width: 16%;
+    padding:10px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.write-message .input .imgIcon{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.emoji{
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+.user-block{
+    font-size: 40px;
+    color: red;
+    text-align: center;
+}
+.audio-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.audio-input button{
+    margin: 0 10px;
+}
