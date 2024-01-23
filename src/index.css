@@ -1,11 +1,20 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
-ol,ul {
+
+ol,
+ul {
   list-style: none;
 }
-h1,h2,h3,h4,h5,h6,p{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   line-height: 0.8;
 }
 
@@ -18,6 +27,7 @@ h1,h2,h3,h4,h5,h6,p{
   --open-sans: 'Open Sans', sans-serif;
   --poppins: 'Poppins', sans-serif;
 }
+
 /* Root Css Part End */
 
 /* registration css start */
@@ -28,3 +38,172 @@ h1,h2,h3,h4,h5,h6,p{
 
 
 /* registration css end */
+
+
+
+/* Group css start */
+
+/* h4 {
+
+  font-size: 17px;
+} */
+
+.textHead {
+  position: absolute;
+  font-size: 25px;
+  left: 150px;
+}
+
+.box {
+  width: 100%;
+  height: 45vh;
+  display: inline-block;
+  border-radius: 20px;
+  margin-top: 2.5vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+}
+
+.grCreatebtn {
+  margin-top: 15px !important;
+  margin-bottom: 4px !important;
+  padding: 5px 20px !important;
+  background: #5F35F5 !important;
+  text-transform: capitalize !important;
+  font-size: 16px !important;
+}
+
+
+.list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  margin: 20px 0;
+}
+
+.list:last-child {
+  border-bottom: 0;
+
+}
+
+.list .profilepic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.req_profilepic {
+  width: 23%;
+}
+
+.reqlist .profilepic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.reqbtn {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reqlistDelbtn {
+  text-transform: capitalize !important;
+  padding: 4px 15px !important;
+  margin: 4px !important;
+  background: rgb(185, 31, 31) !important;
+  font-size: 14px !important;
+  justify-content: center !important;
+}
+
+.joinedbtn {
+  right: 0;
+  padding: 4px 15px !important;
+  position: absolute !important;
+  background: green !important;
+  text-transform: capitalize !important;
+  font-size: 14px !important;
+}
+
+.reqGRSendbtn {
+  right: 0;
+  padding: 4px 15px !important;
+  position: absolute !important;
+  background: #5F35F5 !important;
+  text-transform: capitalize !important;
+  font-size: 14px !important;
+}
+
+.mygrBtnbox {
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  position: absolute;
+}
+
+.reqAlistbtn {
+  text-transform: capitalize !important;
+  padding: 4px 15px !important;
+  margin: 4px !important;
+  background: green !important;
+  font-size: 14px !important;
+  justify-content: center !important;
+}
+
+.greqlistDelbtn {
+  text-transform: capitalize !important;
+  padding: 4px 15px !important;
+  margin: 4px !important;
+  background: rgb(185, 31, 31) !important;
+  font-size: 14px !important;
+  justify-content: center !important;
+}
+
+.req_GR_profilepic {
+  margin-left: -30PX !important;
+  width: 70PX;
+  height: 70PX;
+  border-radius: 50%;
+}
+
+.reqlist {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* column-gap: 15px; */
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  margin: 10px 0;
+}
+
+.frlistbtn {
+  right: 0;
+  padding: 4px 15px !important;
+  position: absolute !important;
+  background: #a51d2f !important;
+  text-transform: capitalize !important;
+  font-size: 14px !important;
+}
+
+.frlistbtn p {
+  right: 0;
+  padding: 15px 0 !important;
+  text-transform: capitalize !important;
+  position: absolute !important;
+  background: rgb(185, 31, 31) !important;
+  font-size: 10px !important;
+  line-height: 0 !important;
+}
+
+
+
+/* Group css end */
