@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import './friend.css'
-import Hadding from '../Heading'
 import Images from '../ImageComp'
 import img from '../../assets/avatar.jpg'
 import Button from '@mui/material/Button';
 import { getDatabase, ref,set, onValue, remove,push} from "firebase/database";
 import { useDispatch, useSelector } from 'react-redux';
-// import { activeUser } from '../../slices/activeUserSlice';
-// import { useNavigate } from 'react-router-dom';
+import Heading from '../Heading'
+import { activeUser } from '../../features/user/activeSlice';
 
 
 const Friend = () => {
     const db = getDatabase();
-    // const userInfo =useSelector(state=>state.loginSlice.value)
+    const userInfo =useSelector(state=>state.logdin.value)
+    console.log(userInfo);
     const [friend,setFriend]=useState([])
     let dispatch=useDispatch()
-    // let navigate=useNavigate()
 
     useEffect(()=>{
         ///////////////// firebase friend confrim data ///////////////////////
@@ -23,9 +22,10 @@ const Friend = () => {
         onValue(friendRef, (snapshot) => {
             let array =[]
             snapshot.forEach((item)=>{
-                // if(userInfo.uid==item.val().sendId || userInfo.uid==item.val().reciveId){
-                // }
+                if(userInfo.uid==item.val().senderId|| userInfo.uid==item.val().reciverId){
+                }
                 array.push({...item.val(),fdId:item.key})
+                console.log(item.val());
             })
             setFriend(array)
         });
@@ -54,47 +54,45 @@ const Friend = () => {
     //     }
     // }
     // handle active click
-    // const handleActive =(item)=>{
-    //     navigate('/messages')
-    //     if(userInfo.uid==item.reciveId){
-    //         dispatch(activeUser({
-    //             type:'single',
-    //             activeChatId:item.sendId,
-    //             activeChatName:item.sendName
-    //         }))
-    //         set(ref(db, 'lastMessage/'+item.sendId), {
-    //             type:'single',
-    //             activeChatId:item.sendId,
-    //             activeChatName:item.sendName
-    //         })
-    //     }else{
-    //         dispatch(activeUser({
-    //             type:'single',
-    //             activeChatId:item.reciveId,
-    //             activeChatName:item.reciveName
-    //         }))
+    const handleActive =(item)=>{
+        if(userInfo.uid==item.reciverId){
+            dispatch(activeUser({
+                type:'single',
+                activeChatId:item.senderId,
+                activeChatName:item.sendName
+            }))
+            // set(ref(db, 'lastMessage/'+item.senderId), {
+            //     type:'single',
+            //     activeChatId:item.senderId,
+            //     activeChatName:item.sendName
+            // })
+        }else{
+            dispatch(activeUser({
+                type:'single',
+                activeChatId:item.reciverId,
+                activeChatName:item.reciveName
+            }))
 
-    //         set(ref(db, 'lastMessage/'+item.reciveId), {
-    //             type:'single',
-    //             activeChatId:item.reciveId,
-    //             activeChatName:item.reciveName
-    //         })
-    //     }
+            // set(ref(db, 'lastMessage/'+item.reciverId), {
+            //     type:'single',
+            //     activeChatId:item.reciverId,
+            //     activeChatName:item.reciveName
+            // })
+        }
         
-    // }
+    }
 
 
   return (
     <div className='box'>
-        {/* <Hadding title ='Friends'/> */}
-        <h1>friend</h1>
+        <Heading tagName="h2" className="" title="My Friend" />
         {friend.map((item)=>(
-             <div className='list'>
-             {/* <Images className='list-img' src={img} /> */}
-             <img style={{width:"50px"}} src={img} alt="img" />
+             <div key={item.fdId} className='list'>
+             <Images className='list-img' imageSrc={img} />
              <div className="text">
-                 {/* <Hadding text ={item.sendId==userInfo.uid ? item.reciveName :item.sendName}/> */}
-                 <h2>fddsjglk</h2>
+                 {/* <Heading tagName='h3' className="" title ={item.senderId==userInfo.uid ? item.reciveName :item.sendName}/> */}
+                 <Heading tagName='h3' className="" title ='friend'/>
+
              </div>
              <div className="flex">
                 <Button className='btn' onClick={()=>handleActive(item)} variant="contained">message</Button>

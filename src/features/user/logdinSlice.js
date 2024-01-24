@@ -13,6 +13,7 @@ export const logdinSlice = createSlice({
       // immutable state based off those changes.
       // Also, no return statement is required from these functions.
       state.value = action.payload
+      console.log(action);
     },
     
   },

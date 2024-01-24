@@ -26,7 +26,7 @@ const MessageList = () => {
     const [sendMessage,setSendMessage]=useState('')
     const [audio,setAudio]=useState('')
     // const active =useSelector(state=>(state.activeUser.value))
-    // const userInfo =useSelector(state=>console.log(state.loginSlice.value))
+    const userInfo =useSelector(state=>state.logdin.value)
     // // audio message 
     const addAudioElement = (blob) => {
         const url = URL.createObjectURL(blob);
