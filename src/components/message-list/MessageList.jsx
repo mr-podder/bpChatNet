@@ -145,7 +145,7 @@ const MessageList = () => {
                         reciveName:active.activeChatName,
                         reciveId:active.activeChatId,
                         audio:downloadURL,
-                        date:`${new Date().getFullYear()}-${new Date().getDate()} ${new Date().getHours()}:${new Date().getMinutes()}`
+                        date:`${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()} ${new Date().getHours()}:${new Date().getMinutes()}`
                     }).then(()=>{
                         setAudio('')
                     })
@@ -156,7 +156,7 @@ const MessageList = () => {
                         reciveName:active.activeChatName,
                         reciveId:active.activeChatId,
                         audio:downloadURL,
-                        date:`${new Date().getFullYear()}-${new Date().getDate()} ${new Date().getHours()}:${new Date().getMinutes()}`
+                        date:`${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()} ${new Date().getHours()}:${new Date().getMinutes()}`
                     }).then(()=>{
                         setAudio('')
                     })
