@@ -22,7 +22,7 @@ const Home = () => {
         </Grid>
         <Grid item xs={4}>
           <MyGroups />
-        </Grid>
+        </Grid> 
         <Grid item xs={4}>
           <UserList />
         </Grid>
