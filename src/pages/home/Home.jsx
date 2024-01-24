@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import UserList from "../../components/homeBoxs/UserList";
 
+
 const Home = () => {
   const logdinData = useSelector((state) => state.logdin.value);
   const navigate = useNavigate();
@@ -16,7 +17,8 @@ const Home = () => {
     <>
       <Grid container spacing={2}>
         <Grid item xs={4}></Grid>
-        <Grid item xs={4}></Grid>
+        <Grid item xs={4}>
+        </Grid>
         <Grid item xs={4}>
           <UserList />
         </Grid>
